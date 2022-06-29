@@ -1,0 +1,96 @@
+@import '~antd/dist/antd.css';
+
+.login-form {
+    width: 293px;
+    max-width: 350px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+
+   
+}
+
+.ant-input {
+    padding: 8px 16px !important;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    background-color: #fff !important;
+    border: 1px solid #564e4e;
+    border-radius: 8px !important;
+}
+
+
+.login-form-button {
+    width: 100%;
+    background-color: #780707;
+    border-radius: 20px;
+    padding: 10px !important;
+    color: white;
+    height: auto;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px !important;
+}
+
+.login-form-button:hover {
+    background-color: #780707b5;
+    color: white;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #780707;
+    border-color: #780707;
+}
+
+.form-heading-text {
+    color: #780707;
+}
+
+.register-form {
+    width: 750px;
+    max-width: 750px;
+    background-color: white;
+    padding: 50px 0px 30px 140px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 33px -2px rgba(158, 158, 158, 0.75);
+    -webkit-box-shadow: 1px 1px 33px -2px rgba(158, 158, 158, 0.75);
+    -moz-box-shadow: 1px 1px 33px -2px rgba(158, 158, 158, 0.75);
+}
+
+.ant-input-affix-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-width: 0;
+    padding: 2px 11px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    line-height: 1.5715;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #3c3b3b;
+    border-radius: 21px;
+    transition: all 0.3s;
+    display: inline-flex;
+}
+
+.register-form-forgot {
+    float: right;
+}
+
+.ant-form-item {
+    margin-bottom: 16px;
+}
+
+.register-form-button {
+    width: 100%;
+}
+
+
+.form-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 22%;
+}
