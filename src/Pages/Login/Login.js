@@ -10,7 +10,8 @@ const Login = () => {
   const onFinish = (values) => {
     axios.post('https://murmuring-springs-62378.herokuapp.com/api/v1/userLogin', values)
       .then(response => {
-        localStorage.setItem("email", response.data.data[0].email);
+        const email = response.data.data[0].email;
+        localStorage.setItem("email", email);
         navigate('/')
         successNotificationWithIcon('success', 'Login Success')
       })
@@ -33,7 +34,7 @@ const Login = () => {
         <h4 className='form-heading-text text-center' >Sign In Now</h4>
         <Form.Item
           className=''
-          name="username"
+          name="email"
           rules={[
             {
               type: 'email',
