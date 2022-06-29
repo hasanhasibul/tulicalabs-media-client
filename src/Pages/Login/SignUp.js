@@ -31,7 +31,7 @@ const SignUp = () => {
             >
                 <h4 className='form-heading-text text-center' >Sign Up Now</h4>
                 <Form.Item
-                    name="username"
+                    name="email"
                     rules={[
                         {
                             type: 'email',
