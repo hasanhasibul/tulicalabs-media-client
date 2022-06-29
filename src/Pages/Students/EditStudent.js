@@ -21,7 +21,7 @@ const EditStudent = () => {
     const [form] = Form.useForm();
     const navigate = useNavigate()
     useEffect(() => {
-        axios.post('http://localhost:5000/api/v1/readStudentById', { id })
+        axios.post('https://murmuring-springs-62378.herokuapp.com/api/v1/readStudentById', { id })
             .then(response => {
                 form.setFieldsValue({
                     name: response.data.data[0].name,
@@ -41,7 +41,7 @@ const EditStudent = () => {
     )
     const onFinish = (values) => {
 
-        axios.post('http://localhost:5000/api/v1/updateStudent', values)
+        axios.post('https://murmuring-springs-62378.herokuapp.com/api/v1/updateStudent', values)
             .then(res => {
                 setLoading(false)
                 successNotificationWithIcon('success', 'Updated success')

@@ -7,7 +7,7 @@ import Header from '../../Components/Header/Header';
 const SignUp = () => {
     const navigate = useNavigate()
     const onFinish = (values) => {
-        axios.post('http://localhost:5000/api/v1/createUser', values)
+        axios.post('https://murmuring-springs-62378.herokuapp.com/api/v1/createUser', values)
             .then(response => {
                 navigate('/login')
                 successNotificationWithIcon('success', 'Sign Up Success')

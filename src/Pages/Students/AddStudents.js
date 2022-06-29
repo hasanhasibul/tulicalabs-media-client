@@ -22,7 +22,7 @@ const AddStudents = () => {
 
     const onFinish = (values) => {
         setLoading(true)
-        axios.post('http://localhost:5000/api/v1/addStudent', values)
+        axios.post('https://murmuring-springs-62378.herokuapp.com/api/v1/addStudent', values)
             .then(res => {
                 setLoading(false)
                 successNotificationWithIcon('success', 'added success')

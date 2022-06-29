@@ -9,7 +9,7 @@ import { successNotificationWithIcon } from '../../Components/Notifications';
 import exportFromJSON from 'export-from-json'
 const { confirm } = Modal;
 
-// http://localhost:5000/api/v1
+// https://murmuring-springs-62378.herokuapp.com/api/v1
 
 const ViewStudent = () => {
     const [loadData, setLoadData] = useState([]);
@@ -17,7 +17,7 @@ const ViewStudent = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/v1/viewStudent')
+        axios.get('https://murmuring-springs-62378.herokuapp.com/api/v1/viewStudent')
             .then(res => {
                 setLoadData(res.data.data)
                 setLoading(false)
@@ -84,7 +84,7 @@ const ViewStudent = () => {
             okType: 'danger',
             cancelText: 'No',
             onOk() {
-                axios.post("http://localhost:5000/api/v1/deleteStudent", { id })
+                axios.post("https://murmuring-springs-62378.herokuapp.com/api/v1/deleteStudent", { id })
                     .then(res => {
                         navigate(0)
                         successNotificationWithIcon('success', 'added success')
