@@ -25,7 +25,6 @@ const EditStudent = () => {
             .then(response => {
                 form.setFieldsValue({
                     name: response.data.data[0].name,
-                    // dob: response.data.data[0].dob,
                     sclass: response.data.data[0].sclass,
                     school: response.data.data[0].school,
                     division: response.data.data[0].division,
@@ -40,14 +39,15 @@ const EditStudent = () => {
     }, []
     )
     const onFinish = (values) => {
-
-        axios.post('https://murmuring-springs-62378.herokuapp.com/api/v1/updateStudent', values)
+        const newvalues = { ...values, id }
+        axios.post('https://murmuring-springs-62378.herokuapp.com/api/v1/updateStudent', newvalues)
             .then(res => {
                 setLoading(false)
                 successNotificationWithIcon('success', 'Updated success')
                 navigate('/view-student')
             })
             .catch((error) => {
+                successNotificationWithIcon('error', 'something is wrong')
                 console.log(error);
             })
     };
@@ -77,9 +77,6 @@ const EditStudent = () => {
                             <Form.Item name="dob" label="DatePicker">
                                 <DatePicker />
                             </Form.Item>
-                            {/* <Form.Item name="dob" label="DatePicker">
-                        <DatePicker suffixIcon={false} className='from-field-style' /> <CalendarOutlined style={{ fontSize: '26px', color: 'grey' }} />
-                    </Form.Item > */}
                             <Form.Item name="school" label="School">
                                 <Select placeholder="Select">
                                     <Select.Option value="RUT High School">RUT High School</Select.Option>

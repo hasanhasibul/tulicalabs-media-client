@@ -17,6 +17,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+        successNotificationWithIcon("error", "email and password is incorrect")
       })
   };
 

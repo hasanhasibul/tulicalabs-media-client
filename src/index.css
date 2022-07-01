@@ -32,3 +32,14 @@ code {
   color: #e31010 !important;
   font-size: 15px !important;
 }
+
+.ant-form-item-control:first-child:not([class^='ant-col-']):not([class*=' ant-col-']) {
+  width: 142px !important;
+}
+
+.search-button {
+  background-color: #780707 !important;
+  color: white !important;
+  padding: 0px 15px !important;
+
+}

@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 import { successNotificationWithIcon } from '../../Components/Notifications';
 import exportFromJSON from 'export-from-json'
+import Search from '../../Components/Search';
 const { confirm } = Modal;
 
 // https://murmuring-springs-62378.herokuapp.com/api/v1
@@ -111,6 +112,7 @@ const ViewStudent = () => {
         <DefaultLayout>
             <div className="add-form">
                 <h5 className='h5 text-color'>View Student</h5>
+                <Search setLoading={setLoading} setLoadData={setLoadData}></Search>
                 <Table
                     columns={columns}
                     dataSource={loadData}
@@ -119,10 +121,6 @@ const ViewStudent = () => {
                     pagination={{
                         pageSize: 10,
                     }}
-                // scroll={{
-                //     y: 340,
-
-                // }}
                 />
 
                 <button onClick={downloadCsv} className="download-excel-button">Download Excel </button>
